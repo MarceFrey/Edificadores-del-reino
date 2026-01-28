@@ -1,25 +1,21 @@
-import Navbar from './components/Navbar'; // <--- Importación
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Integración del Navbar */}
+    <div className="min-h-screen font-sans">
+      {/* Barra de Navegación */}
       <Navbar />
 
-      {/* Contenido principal temporal */}
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="bg-white p-8 rounded-lg shadow text-center">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">
-            Bienvenido a Edificadores del Reino
-          </h1>
-          <p className="text-gray-600 mb-6">
-            Estamos construyendo una plataforma segura y accesible para nuestra comunidad.
-          </p>
-          <div className="p-4 bg-blue-50 border border-blue-100 rounded text-blue-800">
-            🚧 Sitio en Construcción: Fase de Desarrollo UI
-          </div>
-        </div>
-      </div>
+      {/* Portada Principal */}
+      <Hero />
+
+      {/* Sección Temporal para hacer scroll y ver el efecto sticky del nav */}
+      <section className="py-20 px-4 text-center">
+        <h2 className="text-3xl font-bold text-gray-800">Próximas Secciones</h2>
+        <p className="mt-4 text-gray-600">En desarrollo.</p>
+        <div className="h-96"></div> {/* Espacio vacío para probar scroll */}
+      </section>
     </div>
   )
 }
