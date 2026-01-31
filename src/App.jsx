@@ -1,21 +1,20 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import Ministries from './components/Ministries';
 
 function App() {
   return (
     <div className="min-h-screen font-sans">
-      {/* Barra de Navegación */}
       <Navbar />
-
-      {/* Portada Principal */}
       <Hero />
       <About />
+      <Ministries />
 
-      {/* Sección Temporal para hacer scroll y ver el efecto sticky del nav */}
-      <section className="py-20 px-4 text-center bg-gray-50">
-        <h2 className="text-2xl font-bold text-gray-400">Próximamente: Nuestros Ministerios</h2>
-      </section>
+      {/* Footer Temporal */}
+      <footer className="py-10 bg-gray-900 text-center text-gray-400">
+        <p>© 2024 Edificadores del Reino. Próximamente Footer completo.</p>
+      </footer>
     </div>
   )
 }
