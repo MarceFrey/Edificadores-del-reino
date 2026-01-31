@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import About from './components/About';
 
 function App() {
   return (
@@ -9,12 +10,11 @@ function App() {
 
       {/* Portada Principal */}
       <Hero />
+      <About />
 
       {/* Sección Temporal para hacer scroll y ver el efecto sticky del nav */}
-      <section className="py-20 px-4 text-center">
-        <h2 className="text-3xl font-bold text-gray-800">Próximas Secciones</h2>
-        <p className="mt-4 text-gray-600">En desarrollo.</p>
-        <div className="h-96"></div> {/* Espacio vacío para probar scroll */}
+      <section className="py-20 px-4 text-center bg-gray-50">
+        <h2 className="text-2xl font-bold text-gray-400">Próximamente: Nuestros Ministerios</h2>
       </section>
     </div>
   )

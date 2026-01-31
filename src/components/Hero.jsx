@@ -22,7 +22,7 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center items-center text-center">
         
         {/* Etiqueta pequeña superior */}
-        <span className="inline-block py-1 px-3 rounded-full bg-blue-600/20 border border-blue-400 text-blue-100 text-sm font-semibold mb-6 backdrop-blur-sm">
+        <span className="inline-block py-1 px-3 rounded-full bg-amber-100 border border-amber-950 text-amber-900 text-sm font-semibold mb-6 backdrop-blur-sm">
           Bienvenidos a casa
         </span>
 
