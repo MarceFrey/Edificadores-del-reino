@@ -2,6 +2,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Ministries from './components/Ministries';
+import Footer from './components/Footer'; 
 
 function App() {
   return (
@@ -10,11 +11,7 @@ function App() {
       <Hero />
       <About />
       <Ministries />
-
-      {/* Footer Temporal */}
-      <footer className="py-10 bg-gray-900 text-center text-gray-400">
-        <p>© 2024 Edificadores del Reino. Próximamente Footer completo.</p>
-      </footer>
+      <Footer />
     </div>
   )
 }
