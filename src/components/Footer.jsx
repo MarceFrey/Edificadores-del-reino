@@ -84,15 +84,14 @@ const Footer = () => {
         </div>
 
         {/* LÍNEA DIVISORIA Y COPYRIGHT */}
-        {/* Cambio clave: Usamos 'justify-center' y un 'gap-6' para separarlos en el centro */}
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 text-xs text-gray-500">
           
           <p>© {new Date().getFullYear()} Edificadores del Reino.</p>
           
-          {/* Pequeño separador visual (solo en PC) */}
+          {/* Separador visual (solo en PC) */}
           <span className="hidden md:block text-gray-700">|</span>
           
-          {/* TU FIRMA (Ahora segura en el centro) */}
+          {/* MI FIRMA */}
           <div className="flex items-center gap-1 opacity-70 hover:opacity-100 transition-opacity">
             <span>Desarrollado con</span>
             <Heart size={12} className="text-red-500 fill-current" />
