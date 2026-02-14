@@ -32,7 +32,7 @@ const About = () => {
             </h2>
 
             <p className="text-lg text-gray-600 mb-6">
-              Hola, somos los Pastores [Nombre] y [Nombre]. Hace 10 años comenzamos este viaje con un sueño: crear un lugar donde las personas no solo asistan, sino que pertenezcan.
+              Hola, somos los Pastores Alfredo, Dora, Gustavo y Lorena. Hace 29 años comenzamos este viaje con un sueño: crear un lugar donde las personas no solo asistan, sino que pertenezcan.
             </p>
             
             <p className="text-gray-600 mb-8">

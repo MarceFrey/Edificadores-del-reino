@@ -4,8 +4,8 @@ const Ministries = () => {
   // Datos de los ministerios 
   const ministries = [
     {
-      title: "Escuela de Vida",
-      description: "Cursos bíblicos prácticos para fortalecer tu fe y liderazgo.",
+      title: "Escuela biblica",
+      description: "Estudiamos juntos la palabra de dios para poder seguir los pasos de Jesus",
       icon: <BookOpen className="w-8 h-8 text-amber-900" />,
     },
     {
@@ -45,7 +45,7 @@ const Ministries = () => {
             Hay un lugar para <span className="text-amber-900">ti</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Creemos que cada persona tiene un don único. Descubre las áreas donde puedes crecer, servir y ser parte de nuestra familia.
+            Creemos que cada persona tiene un don único. Descubre las áreas donde puedes crecer y ser parte de nuestra familia.
           </p>
         </div>
 

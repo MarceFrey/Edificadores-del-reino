@@ -19,7 +19,7 @@ const Footer = () => {
             </div>
             <p className="text-sm leading-relaxed mb-6 text-gray-400">
               Somos una iglesia comprometida con la verdad bíblica y el amor al prójimo. 
-              Creemos en restaurar familias y transformar nuestra ciudad.
+              Creemos en restaurar familias y transformar nuestro barrio.
             </p>
             {/* Redes Sociales */}
             <div className="flex gap-4">
@@ -33,7 +33,7 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-6">Explora</h3>
             <ul className="space-y-3">
-              {['Inicio', 'Nosotros', 'Ministerios', 'Sermones', 'Donar'].map((item) => (
+              {['Inicio', 'Nosotros', 'areas', 'Contacto'].map((item) => (
                 <li key={item}>
                   <a href="#" className="text-sm hover:text-white hover:translate-x-1 transition-all inline-block">
                     {item}
@@ -49,11 +49,12 @@ const Footer = () => {
             <ul className="space-y-4 text-sm">
               <li className="flex flex-col">
                 <span className="font-medium text-white">Reunión General</span>
-                <span>Domingos 10:00 AM y 19:00 PM</span>
+                <span>Domingos 10:00 AM</span>
+                <span>Miercoles 20:00 PM</span>
               </li>
               <li className="flex flex-col">
-                <span className="font-medium text-white">Oración</span>
-                <span>Martes 20:00 PM</span>
+                <span className="font-medium text-white">Niños</span>
+                <span>Sábados 10:00 AM</span>
               </li>
               <li className="flex flex-col">
                 <span className="font-medium text-white">Jóvenes</span>
@@ -64,15 +65,15 @@ const Footer = () => {
 
           {/* COLUMNA 4: CONTACTO */}
           <div>
-            <h3 className="text-white font-semibold mb-6">Visítanos</h3>
+            <h3 className="text-white font-semibold mb-6">Contacto</h3>
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-blue-500 shrink-0" />
-                <span>Av. Principal 1234, Ciudad, Provincia, País.</span>
+                <span>Japon 2841 - Gran Bourg, Buenos Aires</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-blue-500 shrink-0" />
-                <span>+54 11 1234-5678</span>
+                <span>+54123456789</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-blue-500 shrink-0" />

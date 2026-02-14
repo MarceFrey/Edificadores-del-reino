@@ -12,8 +12,8 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Inicio', href: '#' },
     { name: 'Areas', href: '#' },
-    { name: 'Predicas', href: '#' },
     { name: 'Contacto', href: '#' },
+    { name: 'Donaciones', href: '#' },
   ];
 
   return (
@@ -26,7 +26,7 @@ const Navbar = () => {
             <img 
               src={logoImg} 
               alt="Logo Edificadores del Reino" 
-              className="h-10 w-auto object-contain" // h-10 define la altura, w-auto mantiene la proporción
+              className="h-10 w-auto object-contain" 
             />
             <span className="text-xl font-bold text-amber-950 tracking-wide">
               Edificadores del Reino
@@ -55,7 +55,7 @@ const Navbar = () => {
           <div className="-mr-2 flex md:hidden">
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-blue-600 hover:bg-gray-100 focus:outline-none transition"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-amber-900 hover:bg-gray-100 focus:outline-none transition"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -72,12 +72,12 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="block text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium"
+                className="block text-gray-600 hover:text-amber-900 hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium"
               >
                 {link.name}
               </a>
             ))}
-            <button className="w-full mt-4 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition">
+            <button className="w-full mt-4 bg-amber-900 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-amber-950 transition">
               Acceso Miembros
             </button>
           </div>
