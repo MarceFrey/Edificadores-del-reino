@@ -1,16 +1,21 @@
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Ministries from './components/Ministries';
-import Footer from './components/Footer'; 
+import Footer from './components/Footer';
+
+// Paginas
+import Home from './pages/Home';
+import Donations from './pages/Donations';
 
 function App() {
   return (
-    <div className="min-h-screen font-sans">
+    <div className="min-h-screen flex flex-col font-sans">
       <Navbar />
-      <Hero />
-      <About />
-      <Ministries />
+      <div className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/donaciones" element={<Donations />} />
+        </Routes>
+      </div>
       <Footer />
     </div>
   )

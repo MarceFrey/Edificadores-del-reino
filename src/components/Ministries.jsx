@@ -24,7 +24,7 @@ const Ministries = () => {
       icon: <Users className="w-8 h-8 text-amber-900" />,
     },
     {
-      title: "Niños (Kids)",
+      title: "Niños",
       description: "Enseñanza divertida y segura para los más pequeños de la casa.",
       icon: <Baby className="w-8 h-8 text-amber-900" />,
     },
@@ -36,7 +36,7 @@ const Ministries = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section id="ministerios" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Encabezado de la sección */}

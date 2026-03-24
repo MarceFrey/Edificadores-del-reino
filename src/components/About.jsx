@@ -3,7 +3,7 @@ import pastoresImg from '../assets/pastores.webp';
 
 const About = () => {
   return (
-    <section className="py-20 bg-white overflow-hidden">
+    <section id="nosotros" className="py-20 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Grid de 2 columnas: Se apilan en móvil, lado a lado en tablet/PC */}

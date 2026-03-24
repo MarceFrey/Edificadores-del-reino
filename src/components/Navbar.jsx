@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react'; // Iconos seguros
 import logoImg from'../assets/logo-edr.png';
 
@@ -10,10 +11,10 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const navLinks = [
-    { name: 'Inicio', href: '#' },
-    { name: 'Areas', href: '#' },
-    { name: 'Contacto', href: '#' },
-    { name: 'Donaciones', href: '#' },
+    { name: 'Inicio', path: '/' }, 
+    { name: 'Ministerios', path: '/#ministerios' },
+    { name: 'Donaciones', path: '/donaciones' },
+    { name: 'Contacto', path: '/#contacto' },
   ];
 
   return (
@@ -22,7 +23,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           
           {/* LOGO */}
-          <div className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
             <img 
               src={logoImg} 
               alt="Logo Edificadores del Reino" 
@@ -31,19 +32,19 @@ const Navbar = () => {
             <span className="text-xl font-bold text-amber-950 tracking-wide">
               Edificadores del Reino
             </span>
-          </div>
+          </Link>
 
           {/* MENÚ DE ESCRITORIO (Oculto en móvil) */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.path}
                   className="text-amber-950 hover:text-amber-900 hover:bg-amber-100 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
               <button className="bg-amber-900 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-amber-950 transition shadow-sm">
                 Acceso Miembros
@@ -69,13 +70,14 @@ const Navbar = () => {
         <div className="md:hidden bg-white border-t border-gray-100">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.path}
+                onClick={() => setIsOpen(false)}
                 className="block text-gray-600 hover:text-amber-900 hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
             <button className="w-full mt-4 bg-amber-900 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-amber-950 transition">
               Acceso Miembros
