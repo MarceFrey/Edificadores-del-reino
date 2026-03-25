@@ -1,21 +1,21 @@
 import { ChevronRight, PlayCircle } from 'lucide-react';
-import heroImg from '../assets/portada-edr4.jpg';
 
 const Hero = () => {
   return (
     <div className="relative bg-gray-900 h-[600px] overflow-hidden">
-      
-      {/* IMAGEN DE FONDO */}
-      <div 
-        className="absolute inset-0 z-0"
-      >
-        <img 
-          src={heroImg} 
-          alt="Comunidad reunida" 
-          className="w-full h-full  object-cover"
+
+      {/* VIDEO DE FONDO */}
+      <div className="absolute inset-0 z-0">
+        <video
+          src="/hero-video.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
         />
         {/* OVERLAY (FILTRO OSCURO) */}
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
       {/* CONTENIDO PRINCIPAL */}
