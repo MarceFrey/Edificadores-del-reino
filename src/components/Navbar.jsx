@@ -18,18 +18,18 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white">
+    <nav className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-10">
           
           {/* LOGO */}
           <Link to="/" className="flex items-center gap-3">
             <img 
               src={logoImg} 
               alt="Logo Edificadores del Reino" 
-              className="h-10 w-auto object-contain" 
+              className="h-8 w-auto object-contain" 
             />
-            <span className="text-xl font-bold text-amber-950 tracking-wide">
+            <span className="text-ellipsis font-bold text-amber-950 tracking-wide">
               Edificadores del Reino
             </span>
           </Link>
