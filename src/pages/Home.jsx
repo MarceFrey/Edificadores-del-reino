@@ -1,6 +1,6 @@
 import Hero from '../components/Hero';
 import About from '../components/About';
-import Ministries from '../components/Ministries';
+import Ministries from './Ministries';
 import Events from '../components/Events';
 
 function Home() {
