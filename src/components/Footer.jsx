@@ -11,14 +11,14 @@ const exploreLinks = [
 
 const Footer = () => {
   return (
-    <footer id="contacto" className="bg-gray-900 text-gray-300 pt-16 pb-8">
+    <footer id="contacto" className="bg-neutral-900 text-gray-300 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
             <div className="flex items-center gap-2 mb-6">
               <img src={logoImg} alt="Logo" className="h-8 w-auto grayscale brightness-200" />
               <span className="text-xl font-bold text-white tracking-wide">
-                Edificadores<span className="text-amber-400">Reino</span>
+                Edificadores<span className="text-amber-800">Reino</span>
               </span>
             </div>
             <p className="text-sm leading-relaxed mb-6 text-gray-400">
@@ -30,7 +30,7 @@ const Footer = () => {
                 href="https://www.facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-amber-400 transition-colors"
+                className="text-gray-400 hover:text-amber-800 transition-colors"
                 aria-label="Facebook de Edificadores del Reino (actualizá la URL con tu perfil)"
               >
                 <Facebook size={20} />
@@ -39,7 +39,7 @@ const Footer = () => {
                 href="https://www.instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-amber-400 transition-colors"
+                className="text-gray-400 hover:text-amber-800 transition-colors"
                 aria-label="Instagram de Edificadores del Reino (actualizá la URL con tu perfil)"
               >
                 <Instagram size={20} />
@@ -48,7 +48,7 @@ const Footer = () => {
                 href="https://www.youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-amber-400 transition-colors"
+                className="text-gray-400 hover:text-amber-800 transition-colors"
                 aria-label="YouTube de Edificadores del Reino (actualizá la URL con tu canal)"
               >
                 <Youtube size={20} />
@@ -63,7 +63,7 @@ const Footer = () => {
                 <li key={label}>
                   <Link
                     to={to}
-                    className="text-sm text-gray-400 hover:text-amber-200 hover:translate-x-1 transition-all inline-block"
+                    className="text-sm text-gray-400 hover:text-amber-700 hover:translate-x-1 transition-all inline-block"
                   >
                     {label}
                   </Link>
@@ -95,20 +95,20 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-6">Contacto</h3>
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-amber-500 shrink-0" aria-hidden />
+                <MapPin className="w-5 h-5 text-amber-800 shrink-0" aria-hidden />
                 <span>Japon 2841 - Gran Bourg, Buenos Aires</span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-amber-500 shrink-0" aria-hidden />
-                <a href="tel:+54123456789" className="hover:text-amber-200 transition-colors">
+                <Phone className="w-5 h-5 text-amber-800 shrink-0" aria-hidden />
+                <a href="tel:+54123456789" className="hover:text-amber-700 transition-colors">
                   +54123456789
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-amber-500 shrink-0" aria-hidden />
+                <Mail className="w-5 h-5 text-amber-800 shrink-0" aria-hidden />
                 <a
                   href="mailto:contacto@edificadores.com"
-                  className="hover:text-amber-200 transition-colors break-all"
+                  className="hover:text-amber-700 transition-colors break-all"
                 >
                   contacto@edificadores.com
                 </a>
@@ -117,15 +117,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 text-xs text-gray-500">
+        <div className="border-t border-neutral-950 pt-8 flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 text-xs text-gray-500">
           <p>© {new Date().getFullYear()} Edificadores del Reino.</p>
-          <span className="hidden md:block text-gray-700">|</span>
-          <div className="flex items-center gap-1 opacity-70 hover:opacity-100 transition-opacity">
-            <span>Desarrollado con</span>
-            <Heart size={12} className="text-amber-500 fill-current" aria-hidden />
-            <span>por</span>
-            <span className="font-medium text-amber-400">Marcelo Frey</span>
-          </div>
         </div>
       </div>
     </footer>

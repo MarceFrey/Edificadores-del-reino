@@ -9,7 +9,6 @@ function Home() {
       <Hero />
       <About />
       <Events />
-      <Ministries />
     </div>
   )
 }
