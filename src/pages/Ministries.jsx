@@ -4,7 +4,7 @@ const Ministries = () => {
   // Datos de los ministerios 
   const ministries = [
     {
-      title: "Escuela biblica",
+      title: "Discipulado",
       description: "Estudiamos juntos la palabra de dios para poder seguir los pasos de Jesus",
       icon: <BookOpen className="w-8 h-8 text-amber-900" />,
     },
@@ -24,7 +24,7 @@ const Ministries = () => {
       icon: <Users className="w-8 h-8 text-amber-900" />,
     },
     {
-      title: "Niños",
+      title: "Escuela Biblica",
       description: "Enseñanza divertida y segura para los más pequeños de la casa.",
       icon: <Baby className="w-8 h-8 text-amber-900" />,
     },
