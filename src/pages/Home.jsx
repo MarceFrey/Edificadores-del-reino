@@ -1,10 +1,11 @@
 import Hero from '../components/Hero';
-import About from '../components/About';
-import Events from '../components/Events';
-import Lema from '../components/Lema';
+import About from './About';
+import Events from './Events';
+import Lema from './Lema';
 import Ministries from './Ministries';
-import Contacto from './Contacto';
 import Donations from './Donations';
+import Mapas from './Mapas';
+import Horarios from './Horarios';
 
 function Home() {
   return (
@@ -14,9 +15,9 @@ function Home() {
       <Events />
       <About />
       <Donations />
-      <Contacto />
+      <Horarios />
+      <Mapas />
       <Ministries />
-
     </div>
   )
 }

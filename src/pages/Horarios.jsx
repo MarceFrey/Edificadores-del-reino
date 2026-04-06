@@ -1,8 +1,7 @@
 import HorariosCentral from '../components/HorariosCentral'; 
 import HorariosAnexo from '../components/HorariosAnexo'
-import Mapas from '../components/Mapas';
 
-const Contacto = () => {
+const Horarios = () => {
   return (
     // Esta sección envuelve todo y le da el color de fondo gris claro
     <section id="contacto" className="py-16 bg-white">
@@ -24,12 +23,10 @@ const Contacto = () => {
           <HorariosCentral />
           <HorariosAnexo />
         </div>
-        {/* Colocamos la pieza de los mapas justo debajo */}
-        <Mapas />
       </div>
 
     </section>
   );
 };
 
-export default Contacto;
+export default Horarios;
