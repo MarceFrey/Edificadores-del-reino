@@ -1,20 +1,19 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react'; // Iconos seguros
-import logoImg from'../assets/logo-edr.png';
+import { Menu, X } from 'lucide-react';
+import logoImg from '../assets/logo-edr.png';
 
 const Navbar = () => {
-  // Estado para controlar si el menú móvil está abierto o cerrado
   const [isOpen, setIsOpen] = useState(false);
 
-  // Función para alternar el estado
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  // 1. Modificamos los 'paths' para que usen el símbolo '#' (Hash/Ancla)
   const navLinks = [
-    { name: 'Inicio', path: '/' }, 
-    { name: 'Ministerios', path: '/ministerios' },
-    { name: 'Donaciones', path: '/donaciones' },
-    { name: 'Contacto', path: '/contacto' },
+    { name: 'Inicio', path: '#' }, 
+    { name: 'Ministerios', path: '#ministerios' },
+    { name: 'Donaciones', path: '#donaciones' },
+    { name: 'Contacto', path: '#contacto' },
   ];
 
   return (
@@ -22,8 +21,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-10">
           
-          {/* LOGO */}
-          <Link to="/" className="flex items-center gap-3">
+          {/* LOGO (Este sí lo dejamos con <Link> porque queremos que recargue el inicio) */}
+          <Link to="/" className="flex items-center gap-3" onClick={() => window.scrollTo(0, 0)}>
             <img 
               src={logoImg} 
               alt="Logo Edificadores del Reino" 
@@ -34,17 +33,18 @@ const Navbar = () => {
             </span>
           </Link>
 
-          {/* MENÚ DE ESCRITORIO (Oculto en móvil) */}
+          {/* MENÚ DE ESCRITORIO */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navLinks.map((link) => (
-                <Link
+                // 2. Cambiamos <Link> por <a> para usar anclas de HTML
+                <a
                   key={link.name}
-                  to={link.path}
+                  href={link.path}
                   className="text-amber-950 hover:text-amber-900 hover:bg-amber-100 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
                 >
                   {link.name}
-                </Link>
+                </a>
               ))}
               <button className="bg-amber-900 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-amber-950 transition shadow-sm">
                 Acceso Miembros
@@ -52,7 +52,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* BOTÓN HAMBURGUESA (Solo visible en móvil) */}
+          {/* BOTÓN HAMBURGUESA */}
           <div className="-mr-2 flex md:hidden">
             <button
               onClick={toggleMenu}
@@ -65,19 +65,19 @@ const Navbar = () => {
       </div>
 
       {/* MENÚ MÓVIL DESPLEGABLE */}
-      {/* Renderizado condicional: Solo se muestra si isOpen es true */}
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-100">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
-              <Link
+              // Cambiamos <Link> por <a> también en el celular
+              <a
                 key={link.name}
-                to={link.path}
-                onClick={() => setIsOpen(false)}
+                href={link.path}
+                onClick={() => setIsOpen(false)} // Cierra el menú al hacer clic
                 className="block text-gray-600 hover:text-amber-900 hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium"
               >
                 {link.name}
-              </Link>
+              </a>
             ))}
             <button className="w-full mt-4 bg-amber-900 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-amber-950 transition">
               Acceso Miembros

@@ -50,42 +50,45 @@ const methods = [
 
 const Donations = () => {
   return (
-    <div className="min-h-screen bg-gray-50 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <header className="text-center mb-10 sm:mb-12">
-          <span className="inline-block py-1 px-3 rounded-full bg-amber-100 border border-amber-950/20 text-amber-900 text-sm font-semibold mb-4">
-            Tu apoyo edifica
-          </span>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">
-            Sembrá en lo que{' '}
-            <span className="text-amber-900">Dios está haciendo</span>
-          </h1>
-          <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            Cada donación nos ayuda a sostener ministerios, alcanzar familias y servir con amor a
-            nuestra comunidad. Gracias por colaborar con generosidad.
-          </p>
-        </header>
+    <section id="donaciones" className="py-20 bg-white overflow-hidden">
+      <div className="min-h-screen bg-gray-50 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <header className="text-center mb-10 sm:mb-12">
+            <span className="inline-block py-1 px-3 rounded-full bg-amber-100 border border-amber-950/20 text-amber-900 text-sm font-semibold mb-4">
+              Tu apoyo edifica
+            </span>
+            <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">
+              Sembrá en lo que{' '}
+              <span className="text-amber-900">Dios está haciendo</span>
+            </h1>
+            <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+              Cada donación nos ayuda a sostener ministerios, alcanzar familias y servir con amor a
+              nuestra comunidad. Gracias por colaborar con generosidad.
+            </p>
+          </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {methods.map(({ icon: Icon, title, description, details }) => (
-            <article
-              key={title}
-              className="flex flex-col bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200 p-6"
-            >
-              <div
-                className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-50 text-amber-900 mb-4"
-                aria-hidden
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {methods.map(({ icon: Icon, title, description, details }) => (
+              <article
+                key={title}
+                className="flex flex-col bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200 p-6"
               >
-                <Icon className="w-6 h-6" strokeWidth={2} />
-              </div>
-              <h2 className="text-lg font-semibold text-gray-900 mb-2">{title}</h2>
-              <p className="text-sm text-gray-600 leading-relaxed flex-1">{description}</p>
-              {details}
-            </article>
-          ))}
+                <div
+                  className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-50 text-amber-900 mb-4"
+                  aria-hidden
+                >
+                  <Icon className="w-6 h-6" strokeWidth={2} />
+                </div>
+                <h2 className="text-lg font-semibold text-gray-900 mb-2">{title}</h2>
+                <p className="text-sm text-gray-600 leading-relaxed flex-1">{description}</p>
+                {details}
+              </article>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+    
   );
 };
 

@@ -20,7 +20,7 @@ const Ministries = () => {
     },
     {
       title: "Jóvenes",
-      description: "Un espacio dinámico para que las nuevas generaciones encuentren su identidad.",
+      description: "El lugar donde la juventud se reune a adorar y aprender la palabra de Dios",
       icon: <Users className="w-8 h-8 text-amber-900" />,
     },
     {
@@ -31,6 +31,21 @@ const Ministries = () => {
     {
       title: "Matrimonios",
       description: "Herramientas para construir familias fuertes y unidas.",
+      icon: <Heart className="w-8 h-8 text-amber-900" />,
+    },
+    {
+      title: "Adolescentes",
+      description: "Un espacio dinámico para que las nuevas generaciones encuentren su identidad.",
+      icon: <Heart className="w-8 h-8 text-amber-900" />,
+    },
+    {
+      title: "Hombres",
+      description: "Donde los hombres de la Iglesia aprenden a ser hombres de Dios.",
+      icon: <Heart className="w-8 h-8 text-amber-900" />,
+    },
+    {
+      title: "Mujeres",
+      description: "El espacio donde Dios tiene los detalles mas hermosos para ellas",
       icon: <Heart className="w-8 h-8 text-amber-900" />,
     },
   ];
