@@ -3,10 +3,9 @@ import pastoresImg from '../assets/pastores.webp';
 
 const About = () => {
   return (
-    <section id="nosotros" className="py-20 bg-white overflow-hidden">
+    <section id="nosotros" className="relative py-20 bg-[url('/Textura7.png')] bg-cover bg-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Grid de 2 columnas: Se apilan en móvil, lado a lado en tablet/PC */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           {/* COLUMNA 1: IMAGEN */}

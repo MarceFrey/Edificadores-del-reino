@@ -12,14 +12,21 @@ function Home() {
     <div className="min-h-screen font-sans bg-[url('/fondo.png')] bg-cover bg-center bg-fixed">
       <Hero />
       <Lema/>
-      <Events />
       <About />
-      <Donations />
-      <Horarios />
-      <Mapas />
+
+      <div className="relative bg-[url('/events-bg.jpg')] bg-cover bg-center">
+        <div className="absolute inset-0 bg-white/15 backdrop-blur-sm"></div>       
+        <div className="relative z-10">
+          <Horarios />
+          <Mapas />
+        </div>
+      </div>
+
+      <Events />
       <Ministries />
+      <Donations />
     </div>
   )
 }
 
-export default Home
+export default Home;

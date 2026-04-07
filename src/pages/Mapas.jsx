@@ -2,11 +2,10 @@ import { MapPin } from 'lucide-react';
 
 const Mapas = () => {
   return (
-    <section id="mapas" className="py-16 bg-red-600">
+    <section id="mapas" className="py-20">
       
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Encabezado de Mapas */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Vení a <span className="text-amber-900">visitarnos</span>
@@ -16,14 +15,13 @@ const Mapas = () => {
           </p>
         </div>
 
-        {/* Grid de Sedes */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           
           {/* Sede Central */}
           <div className="flex flex-col">
             <div className="flex items-center gap-2 mb-4">
               <MapPin className="text-amber-900 w-6 h-6" />
-              <h3 className="text-2xl font-bold text-gray-900">Sede Central</h3>
+              <h3 className="text-2xl font-bold text-gray-900">Gran Bourg</h3>
             </div>
             <div className="w-full h-80 rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300">
               <iframe
@@ -43,7 +41,7 @@ const Mapas = () => {
           <div className="flex flex-col">
             <div className="flex items-center gap-2 mb-4">
               <MapPin className="text-amber-900 w-6 h-6" />
-              <h3 className="text-2xl font-bold text-gray-900">Anexo</h3>
+              <h3 className="text-2xl font-bold text-gray-900">Del Viso</h3>
             </div>
             <div className="w-full h-80 rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300">
               <iframe

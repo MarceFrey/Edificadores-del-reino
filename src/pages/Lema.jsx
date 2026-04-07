@@ -3,7 +3,7 @@ import lema from '../assets/lema-abril.jpeg'
 
 const Lema = () => {
   return (
-    <section id="lema" className="py-20 bg-white overflow-hidden">
+    <section id="lema" className="relative py-20 bg-[url('/textura.png')] bg-cover bg-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Contenedor Flex: Imagen a la izquierda, texto a la derecha */}
@@ -14,10 +14,7 @@ const Lema = () => {
             <div className="relative h-full min-h-[400px]">
               {/* Decoración detrás de la foto */}
               <div className="absolute -top-4 -left-4 w-72 h-72 bg-amber-100 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
-              
-              {/* La foto se estirará automáticamente para igualar la altura del texto gracias a h-full y object-cover */}
               <img 
-                // Te sugiero buscar una imagen de alguien orando o una puerta/luz para este mes
                 src={lema} 
                 alt="Tiempo de oración" 
                 className="relative rounded-3xl shadow-xl shadow-gray-200 w-full h-full object-cover"
@@ -48,27 +45,6 @@ const Lema = () => {
               <p>
                 Los animamos a intensificar su vida de oración, porque allí encontrarán dirección, consuelo y fortaleza. El Señor ha preparado este tiempo para que todo guerrero cansado y todo luchador fiel, reciba buenas noticias y gran bendición. <strong className="text-gray-800">¡Él lo hace! Por eso, regocíjense.</strong>
               </p>
-            </div>
-
-            {/* Sección de "Ascender" (Lista con viñetas) */}
-            <div className="bg-gray-50 rounded-2xl p-6 md:p-8 mb-8 border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Este es un mes de ascender a Él...
-              </h3>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <ArrowUpRight className="w-6 h-6 text-amber-600 shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Ascender para <strong>ver desde su perspectiva</strong>.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowUpRight className="w-6 h-6 text-amber-600 shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Ascender para <strong>recibir mayor revelación</strong>.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowUpRight className="w-6 h-6 text-amber-600 shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Ascender para <strong>tomar las llaves del Reino</strong> para este tiempo.</span>
-                </li>
-              </ul>
             </div>
 
             {/* Párrafo de Cierre */}

@@ -50,8 +50,7 @@ const methods = [
 
 const Donations = () => {
   return (
-    <section id="donaciones" className="py-20 bg-white overflow-hidden">
-      <div className="min-h-screen bg-gray-50 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+    <section id="donaciones" className="relative py-20 bg-[url('/textura2.png')] bg-cover bg-center">
         <div className="max-w-7xl mx-auto">
           <header className="text-center mb-10 sm:mb-12">
             <span className="inline-block py-1 px-3 rounded-full bg-amber-100 border border-amber-950/20 text-amber-900 text-sm font-semibold mb-4">
@@ -86,7 +85,6 @@ const Donations = () => {
             ))}
           </div>
         </div>
-      </div>
     </section>
     
   );

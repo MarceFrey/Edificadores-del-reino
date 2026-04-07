@@ -6,22 +6,22 @@ const HorariosCentral = () => {
       title: 'Reunión General', 
       days: 'Dom 10:00 AM | Mié 20:00 PM', 
       icon: Users, 
-      color: 'text-blue-600', 
-      bg: 'bg-blue-50' 
+      color: 'text-amber-900', 
+      bg: 'bg-amber-100' 
     },
     { 
       title: 'Niños', 
       days: 'Sáb 10:00 AM', 
       icon: Baby, 
-      color: 'text-green-600', 
-      bg: 'bg-green-50' 
+      color: 'text-amber-900', 
+      bg: 'bg-amber-100' 
     },
     { 
       title: 'Jóvenes', 
       days: 'Sáb 21:00 PM', 
       icon: Flame, 
-      color: 'text-amber-600', 
-      bg: 'bg-amber-50' 
+      color: 'text-amber-900', 
+      bg: 'bg-amber-100' 
     },
   ];
 
