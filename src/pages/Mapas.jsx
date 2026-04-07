@@ -2,7 +2,7 @@ import { MapPin } from 'lucide-react';
 
 const Mapas = () => {
   return (
-    <section id="mapas" className="py-16">
+    <section id="mapas" className="py-16 bg-red-600">
       
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
