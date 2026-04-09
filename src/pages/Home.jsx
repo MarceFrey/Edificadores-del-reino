@@ -14,7 +14,7 @@ function Home() {
       <Lema/>
       <About />
 
-      <div className="relative bg-[url('/events-bg.jpg')] bg-cover bg-center">
+      <div className="relative bg-[url('/textura.png')] bg-cover bg-center">
         <div className="absolute inset-0 bg-white/15 backdrop-blur-sm"></div>       
         <div className="relative z-10">
           <Horarios />
