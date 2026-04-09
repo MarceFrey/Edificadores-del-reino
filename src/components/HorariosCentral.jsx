@@ -12,6 +12,7 @@ const HorariosCentral = () => {
     { 
       title: 'Niños', 
       days: 'Sáb 10:00 AM', 
+      
       icon: Baby, 
       color: 'text-amber-900', 
       bg: 'bg-gray-100' 

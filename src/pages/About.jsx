@@ -21,11 +21,7 @@ const About = () => {
           </div>
 
           {/* COLUMNA 2: TEXTO */}
-          <div>
-            <span className="inline-block py-1 px-3 rounded-full bg-amber-100 border border-amber-950 text-amber-900 text-sm font-semibold mb-6 backdrop-blur-sm">
-                Sobre Nosotros
-            </span>
-            
+          <div>               
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
               Guiando a una generación hacia su <span className="text-amber-900">propósito</span>.
             </h2>

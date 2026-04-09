@@ -57,41 +57,6 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-6">Explora</h3>
-            <ul className="space-y-3">
-              {exploreLinks.map(({ label, to }) => (
-                <li key={label}>
-                  <Link
-                    to={to}
-                    className="text-sm text-gray-400 hover:text-amber-700 hover:translate-x-1 transition-all inline-block"
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-white font-semibold mb-6">Reuniones</h3>
-            <ul className="space-y-4 text-sm">
-              <li className="flex flex-col">
-                <span className="font-medium text-white">Reunión General</span>
-                <span>Domingos 10:00 AM</span>
-                <span>Miercoles 20:00 PM</span>
-              </li>
-              <li className="flex flex-col">
-                <span className="font-medium text-white">Niños</span>
-                <span>Sábados 10:00 AM</span>
-              </li>
-              <li className="flex flex-col">
-                <span className="font-medium text-white">Jóvenes</span>
-                <span>Sábados 21:00 PM</span>
-              </li>
-            </ul>
-          </div>
-
-          <div>
             <h3 className="text-white font-semibold mb-6">Contacto</h3>
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">

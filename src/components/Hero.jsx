@@ -4,27 +4,43 @@ const Hero = () => {
   return (
     <div className="relative bg-gray-900 h-[600px] overflow-hidden">
 
-      {/* VIDEO DE FONDO */}
+      {/* --- FONDOS (VIDEOS/IMÁGENES) --- */}
       <div className="absolute inset-0 z-0">
+        
+        {/* 🖥️ VERSIÓN ESCRITORIO (Horizontal) 
+            'hidden' lo oculta en celulares.
+            'md:block' lo muestra a partir de pantallas medianas (tablets y PC). */}
         <video
           src="/hero-video.mp4"
           autoPlay
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="hidden md:block absolute inset-0 w-full h-full object-cover"
         />
-        {/* OVERLAY (FILTRO OSCURO) */}
+
+        {/* 📱 VERSIÓN CELULAR (Vertical) 
+            'block' lo muestra por defecto en celulares.
+            'md:hidden' lo esconde cuando la pantalla es grande. */}
+        {/* ⚠️ Si tu archivo es una foto y no un video, cambia toda esta etiqueta <video> por: 
+            <img src="/hero-video-resp.jpg" className="block md:hidden absolute inset-0 w-full h-full object-cover" /> 
+        */}
+        <video
+          src="/hero-video-resp.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="block md:hidden absolute inset-0 w-full h-full object-cover"
+        />
+
+        {/* OVERLAY (FILTRO OSCURO COMPARTIDO) */}
+        {/* Este filtro se aplica a cualquiera de los dos videos que esté visible */}
         <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
-      {/* CONTENIDO PRINCIPAL */}
+      {/* --- CONTENIDO PRINCIPAL --- */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center items-center text-center">
-        
-        {/* Etiqueta pequeña superior */}
-        <span className="inline-block py-1 px-3 rounded-full bg-amber-100 border border-amber-950 text-amber-900 text-sm font-semibold mb-6 backdrop-blur-sm">
-          Bienvenidos a casa
-        </span>
 
         {/* Título Principal */}
         <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6">
@@ -34,7 +50,7 @@ const Hero = () => {
 
         {/* Subtítulo */}
         <p className="mt-4 text-xl text-gray-200 max-w-2xl mb-10">
-          Testimonios vivos del amor de cristo
+          Testimonios vivos del amor de Cristo
         </p>
 
         {/* Botones de Acción */}
