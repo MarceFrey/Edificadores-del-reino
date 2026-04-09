@@ -7,21 +7,21 @@ const HorariosAnexo = () => {
       days: 'Dom 10:00 AM | Mié 20:00 PM', 
       icon: Users, 
       color: 'text-amber-900', 
-      bg: 'bg-amber-100' 
+      bg: 'bg-gray-100' 
     },
     { 
       title: 'Niños', 
       days: 'Sáb 10:00 AM', 
       icon: Baby, 
       color: 'text-amber-900', 
-      bg: 'bg-amber-100' 
+      bg: 'bg-gray-100' 
     },
     { 
       title: 'Jóvenes', 
       days: 'Sáb 21:00 PM', 
       icon: Flame, 
       color: 'text-amber-900', 
-      bg: 'bg-amber-100' 
+      bg: 'bg-gray-100' 
     },
   ];
 
@@ -32,7 +32,7 @@ const HorariosAnexo = () => {
       <div className="bg-white rounded-3xl p-6 md:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 h-full flex flex-col">
         
         <div className="flex items-center gap-4 mb-8 pb-6 border-b border-gray-100">
-          <div className="p-3 bg-amber-50 rounded-2xl">
+          <div className="p-3 bg-gray-100 rounded-2xl">
             <MapPin className="text-amber-900 w-7 h-7" strokeWidth={2.5} />
           </div>
           <div>
