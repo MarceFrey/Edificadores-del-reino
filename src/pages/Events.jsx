@@ -34,11 +34,8 @@ const Events = () => {
         
         {/* ── Encabezado de la Sección ── */}
         <div className="text-center mb-16">
-          <span className="inline-block py-1.5 px-4 rounded-full bg-amber-100 text-amber-900 text-sm font-bold tracking-widest uppercase mb-4">
-            Próximos Eventos
-          </span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">
-            Agendá tu <span className="text-amber-900">Lugar</span>
+            Próximos Eventos
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Únete y sé parte de lo que Dios está haciendo en nuestra comunidad. ¡Te esperamos!

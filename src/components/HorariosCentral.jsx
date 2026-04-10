@@ -40,9 +40,6 @@ const HorariosCentral = () => {
             <h3 className="text-2xl font-extrabold text-gray-900 tracking-tight">
               Grand Bourg
             </h3>
-            <p className="text-sm text-gray-500 font-semibold tracking-wide uppercase mt-1">
-              Sede Central
-            </p>
           </div>
         </div>
 
