@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section id="nosotros" className="relative py-24 bg-[url('/Textura7.png')] bg-cover bg-center">
       
-      {/* 1. EL OVERLAY: Fundamental para proteger la legibilidad del texto */}
+      {/* 1. EL OVERLAY: protege la legibilidad del texto */}
       <div className="absolute inset-0 bg-white/90 backdrop-blur-sm"></div>
 
       {/* Todo el contenido envuelto en relative z-10 para que quede arriba del overlay */}
@@ -16,14 +16,10 @@ const About = () => {
           
           {/* --- COLUMNA 1: IMAGEN --- */}
           <div className="relative group">
-            {/* CORRECCIÓN DE COLOR: Cambiamos blue-100 a amber-100 para mantener la identidad */}
-            {/* Agregamos una animación donde el fondo ámbar se mueve un poquito al pasar el mouse */}
             <div className="absolute -bottom-6 -left-6 w-full h-full bg-amber-100 rounded-3xl -z-10 transform group-hover:-translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
-            
             {/* Destello de luz detrás de la foto */}
             <div className="absolute -top-6 -right-6 w-32 h-32 bg-amber-200 rounded-full -z-10 blur-2xl opacity-60"></div>
-            
-            {/* LA FOTO: Le agregamos un borde blanco (border-4 border-white) y mucha sombra */}
+            {/* LA FOTO: borde blanco (border-4 border-white) y mucha sombra */}
             <img 
               src={pastoresImg} 
               alt="Pastores de la iglesia Edificadores del Reino" 

@@ -6,12 +6,14 @@ import Ministries from './Ministries';
 import Donations from './Donations';
 import Mapas from './Mapas';
 import Horarios from './Horarios';
+import Pastores from './Pastores';
 
 function Home() {
   return (
     <div className="min-h-screen font-sans bg-[url('/fondo.png')] bg-cover bg-center bg-fixed">
       <Hero />
       <Lema/>
+      <Pastores />
       <About />
       <Horarios />
       <Mapas />
