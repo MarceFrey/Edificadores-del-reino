@@ -1,35 +1,13 @@
-import { Banknote, Landmark, QrCode } from 'lucide-react';
+import { Banknote, QrCode } from 'lucide-react';
 
 const methods = [
-  {
-    icon: Landmark,
-    title: 'Transferencia bancaria',
-    description:
-      'Podés enviar tu ofrenda o diezmo por transferencia. Solicitá los datos actualizados (CBU, alias y titular) en la secretaría o por WhatsApp.',
-    details: (
-      <dl className="mt-4 space-y-2 text-sm text-gray-600 border-t border-gray-100 pt-4">
-        <div className="flex flex-col gap-0.5">
-          <dt className="font-medium text-gray-700">Banco</dt>
-          <dd>A confirmar con administración</dd>
-        </div>
-        <div className="flex flex-col gap-0.5">
-          <dt className="font-medium text-gray-700">CBU / Alias</dt>
-          <dd>A confirmar con administración</dd>
-        </div>
-        <div className="flex flex-col gap-0.5">
-          <dt className="font-medium text-gray-700">Titular</dt>
-          <dd>Edificadores del Reino</dd>
-        </div>
-      </dl>
-    ),
-  },
   {
     icon: QrCode,
     title: 'Mercado Pago',
     description:
       'Pronto habilitaremos un enlace o código QR para donar de forma rápida desde la app de Mercado Pago.',
     details: (
-      <p className="mt-4 text-sm text-amber-900 bg-amber-50 border border-amber-100 rounded-lg px-3 py-2">
+      <p className="mt-4 text-sm text-amber-900 bg-amber-50 border border-amber-100 rounded-xl px-4 py-3 font-medium shadow-sm">
         Estamos preparando esta opción. Mientras tanto, podés usar transferencia o efectivo.
       </p>
     ),
@@ -40,9 +18,15 @@ const methods = [
     description:
       'Recibimos ofrendas en efectivo los días de reunión. Acercate al área de recepción o consultá a un líder al final del servicio.',
     details: (
-      <ul className="mt-4 text-sm text-gray-600 space-y-1 border-t border-gray-100 pt-4 list-disc list-inside">
-        <li>Domingos y encuentros especiales</li>
-        <li>Sobre o cofre en recepción (según disponibilidad)</li>
+      <ul className="mt-4 text-sm text-gray-600 space-y-2 border-t border-gray-100 pt-4">
+        <li className="flex items-center gap-2">
+          <span className="w-1.5 h-1.5 rounded-full bg-amber-900 shrink-0"></span>
+          Domingos y encuentros especiales
+        </li>
+        <li className="flex items-center gap-2">
+          <span className="w-1.5 h-1.5 rounded-full bg-amber-900 shrink-0"></span>
+          Sobre o cofre en recepción (según disponibilidad)
+        </li>
       </ul>
     ),
   },
@@ -50,43 +34,63 @@ const methods = [
 
 const Donations = () => {
   return (
-    <section id="donaciones" className="relative py-20 bg-[url('/textura2.png')] bg-cover bg-center">
-        <div className="max-w-7xl mx-auto">
-          <header className="text-center mb-10 sm:mb-12">
-            <span className="inline-block py-1 px-3 rounded-full bg-amber-100 border border-amber-950/20 text-amber-900 text-sm font-semibold mb-4">
-              Tu apoyo edifica
-            </span>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">
-              Sembrá en lo que{' '}
-              <span className="text-amber-900">Dios está haciendo</span>
-            </h1>
-            <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-              Cada donación nos ayuda a sostener ministerios, alcanzar familias y servir con amor a
-              nuestra comunidad. Gracias por colaborar con generosidad.
-            </p>
-          </header>
+    // 1. EL FONDO Y EL OVERLAY (Protege la lectura)
+    <section id="donaciones" className="relative py-24 bg-[url('/textura2.png')] bg-cover bg-center">
+      <div className="absolute inset-0 bg-white/90 backdrop-blur-[2px]"></div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {methods.map(({ icon: Icon, title, description, details }) => (
-              <article
-                key={title}
-                className="flex flex-col bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200 p-6"
+      {/* CONTENEDOR PRINCIPAL */}
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Encabezado */}
+        <header className="text-center mb-16">
+          <span className="inline-block py-1.5 px-4 rounded-full bg-amber-100 border border-amber-200 text-amber-900 text-sm font-bold tracking-widest uppercase mb-4 shadow-sm">
+            Tu apoyo edifica
+          </span>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">
+            Sembrá en lo que{' '}
+            <span className="text-amber-900">Dios está haciendo</span>
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Cada donación nos ayuda a sostener ministerios, alcanzar familias y servir con amor a
+            nuestra comunidad. Gracias por colaborar con generosidad.
+          </p>
+        </header>
+
+        {/* GRID DE TARJETAS */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+          
+          {methods.map(({ icon: Icon, title, description, details }) => (
+            <article
+              key={title}
+              className="group flex flex-col bg-white rounded-3xl border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl hover:-translate-y-2 transition-all duration-300 p-8"
+            >
+              
+              {/* Icono con animación */}
+              <div
+                className="flex h-16 w-16 items-center justify-center rounded-2xl bg-amber-50 text-amber-900 mb-6 group-hover:scale-110 group-hover:bg-amber-100 transition-all duration-300"
+                aria-hidden
               >
-                <div
-                  className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-50 text-amber-900 mb-4"
-                  aria-hidden
-                >
-                  <Icon className="w-6 h-6" strokeWidth={2} />
-                </div>
-                <h2 className="text-lg font-semibold text-gray-900 mb-2">{title}</h2>
-                <p className="text-sm text-gray-600 leading-relaxed flex-1">{description}</p>
+                <Icon className="w-8 h-8" strokeWidth={2} />
+              </div>
+              
+              <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-amber-900 transition-colors">
+                {title}
+              </h3>
+              
+              <p className="text-base text-gray-600 leading-relaxed flex-1 mb-6">
+                {description}
+              </p>
+              
+              {/* Detalles (Alerta de MP o Lista de Efectivo) */}
+              <div className="mt-auto">
                 {details}
-              </article>
-            ))}
-          </div>
+              </div>
+              
+            </article>
+          ))}
         </div>
+      </div>
     </section>
-    
   );
 };
 
