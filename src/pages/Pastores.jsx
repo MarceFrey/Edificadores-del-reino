@@ -1,75 +1,75 @@
+import { Quote } from 'lucide-react';
+// 🪄 1. Importamos la herramienta Link para poder navegar
+import { Link } from 'react-router-dom';
+
 const Pastores = () => {
   return (
-    // Fondo gris extraclaro para dar respiro visual
-    <section id="lideres" className="py-24 bg-gray-50">
-      
-      {/* Usamos max-w-5xl porque solo son 2 columnas, así no quedan muy separadas */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="lideres" className="py-24 bg-gray-50 overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* --- ENCABEZADO --- */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
-            Pastores
-          </h2>
-        </div>
-
-        {/* --- GRID DE LÍDERES --- */}
-        {/* 1 columna en celu, 2 columnas en PC */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
-          {/* LÍDERES 1: Apóstoles Alfredo y Dora */}
-          <div className="flex flex-col items-center text-center group">
+          {/* --- COLUMNA 1: LA FOTOGRAFÍA --- */}
+          {/* Mantenemos 'group' aquí para controlar los efectos de los hijos al hacer hover */}
+          <div className="flex justify-center lg:justify-end order-1 lg:order-2 group">
             
-            {/* Contenedor de la foto */}
-            <div className="relative w-56 h-56 sm:w-64 sm:h-64 mb-8">
-              {/* Sombra ámbar difuminada detrás (Efecto Glow) */}
-              <div className="absolute inset-0 bg-amber-200 rounded-full blur-xl opacity-40 group-hover:opacity-70 transition-opacity duration-500"></div>
+            <Link 
+              to="/nosotros" 
+              className="relative w-64 h-64 sm:w-80 sm:h-80 block cursor-pointer overflow-hidden rounded-full"
+              aria-label="Conoce más sobre los Apóstoles"
+            >
+              {/* Sombra ámbar difuminada de fondo (se mantiene igual) */}
+              <div className="absolute inset-0 bg-amber-200 rounded-full blur-2xl opacity-40 group-hover:opacity-70 transition-opacity duration-500"></div>
               
-              {/* La Fotografía */}
+              {/* 🖼️ La Fotografía */}
+              {/* Añadimos group-hover:scale-105 (ya estaba) y group-hover:opacity-60 
+                  para que la foto se ponga un poco opaca al pasar el mouse */}
               <img 
                 src="/pastores1.jpeg" 
-                alt="Apóstoles Alfredo y Dora" 
-                className="relative w-full h-full object-cover rounded-full shadow-lg border-4 border-white group-hover:scale-105 transition-transform duration-500"
+                alt="Apóstoles Alfredo y Dora Provenzano" 
+                className="relative w-full h-full object-cover rounded-full shadow-2xl border-8 border-white transition-all duration-500 group-hover:scale-105 group-hover:opacity-50 z-10"
               />
-            </div>
-            
-            {/* Textos */}
-            <p className="text-amber-700 font-bold uppercase tracking-widest text-sm">
-              Apóstoles
-            </p>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-amber-900 transition-colors duration-300">
-              Alfredo y Dora
-            </h3>
-            
+
+              {/* 🪄 EL NUEVO EFECTO: Superposición de texto al hacer hover */}
+              {/* Este div está oculto por defecto (opacity-0) y se muestra en hover (group-hover:opacity-100).
+                  Se posiciona absolutamente sobre la foto. z-20 para estar sobre la imagen. */}
+              <div className="absolute inset-0 bg-amber-950/80 rounded-full flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-20 p-4 text-center">
+                <p className="text-white text-xl font-bold leading-tight">
+                  Conoce nuestra<br />historia
+                </p>
+              </div>
+            </Link>
           </div>
 
-          {/* LÍDERES 2: Pastores Gustavo y Lorena */}
-          <div className="flex flex-col items-center text-center group">
+          {/* --- COLUMNA 2: LOS TEXTOS (Sin cambios) --- */}
+          <div className="flex flex-col order-2 lg:order-1">
             
-            {/* Contenedor de la foto */}
-            <div className="relative w-56 h-56 sm:w-64 sm:h-64 mb-8">
-              {/* Sombra ámbar difuminada detrás (Efecto Glow) */}
-              <div className="absolute inset-0 bg-amber-200 rounded-full blur-xl opacity-40 group-hover:opacity-70 transition-opacity duration-500"></div>
-              
-              {/* La Fotografía */}
-              <img 
-                src="/pastores2.jpeg" 
-                alt="Pastores Gustavo y Lorena" 
-                className="relative w-full h-full object-cover rounded-full shadow-lg border-4 border-white group-hover:scale-105 transition-transform duration-500"
-              />
+            <div className="self-start inline-block py-1.5 px-4 rounded-full bg-amber-100 border border-amber-200 text-amber-900 text-xs font-bold tracking-widest uppercase mb-6 shadow-sm">
+              Nuestros Líderes
             </div>
             
-            {/* Textos */}
-            <p className="text-amber-700 font-bold uppercase tracking-widest text-sm">
-              Pastores
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-6">
+              Guiando a una generación hacia su <span className="text-amber-700">propósito</span>.
+            </h2>
+            
+            <p className="text-lg text-gray-600 mb-4 leading-relaxed">
+              Hola, somos los <strong className="text-gray-900">Apóstoles Alfredo y Dora Provenzano</strong>. Hace 29 años comenzamos este viaje con un sueño: crear un lugar donde las personas no solo asistan, sino que <span className="italic">pertenezcan</span>.
             </p>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-amber-900 transition-colors duration-300">
-              Gustavo y Lorena
-            </h3>
+            
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              En Edificadores del Reino, creemos firmemente en la restauración integral de la familia y en equipar a cada creyente para impactar su entorno con excelencia y amor.
+            </p>
+
+            <div className="relative bg-white rounded-2xl p-6 border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] mt-2">
+              <Quote className="absolute top-4 right-4 w-10 h-10 text-amber-100" strokeWidth={1} />
+              <p className="text-xl text-amber-900 font-serif italic relative z-10">
+                "Edificando vidas, transformando generaciones"
+              </p>
+            </div>
+
           </div>
 
         </div>
-
       </div>
     </section>
   );

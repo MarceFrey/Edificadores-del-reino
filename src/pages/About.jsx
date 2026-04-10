@@ -1,5 +1,4 @@
 import { Quote } from 'lucide-react';
-import pastoresImg from '../assets/pastores.webp'; 
 
 const About = () => {
   return (
@@ -21,7 +20,7 @@ const About = () => {
             <div className="absolute -top-6 -right-6 w-32 h-32 bg-amber-200 rounded-full -z-10 blur-2xl opacity-60"></div>
             {/* LA FOTO: borde blanco (border-4 border-white) y mucha sombra */}
             <img 
-              src={pastoresImg} 
+              src= "/pastores1.jpeg"
               alt="Pastores de la iglesia Edificadores del Reino" 
               className="relative w-full rounded-2xl shadow-2xl border-4 border-white object-cover aspect-[4/5] hover:scale-[1.02] transition duration-500"
             />
@@ -42,7 +41,7 @@ const About = () => {
             </h2>
 
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Hola, somos los <strong className="text-gray-900">Pastores Alfredo, Dora, Gustavo y Lorena</strong>. Hace 29 años comenzamos este viaje con un sueño: crear un lugar donde las personas no solo asistan, sino que <span className="italic">pertenezcan</span>.
+              Hola, somos los <strong className="text-gray-900">Apostoles Alfredo y Dora Provenzano</strong>. Hace 29 años comenzamos este viaje con un sueño: crear un lugar donde las personas no solo asistan, sino que <span className="italic">pertenezcan</span>.
             </p>
             
             <p className="text-lg text-gray-700 mb-10 leading-relaxed">

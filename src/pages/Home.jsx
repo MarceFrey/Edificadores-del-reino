@@ -14,7 +14,6 @@ function Home() {
       <Hero />
       <Lema/>
       <Pastores />
-      <About />
       <Horarios />
       <Mapas />
       <Events />
