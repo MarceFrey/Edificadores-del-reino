@@ -2,7 +2,7 @@ import { MapPin } from 'lucide-react';
 
 const Mapas = () => {
   return (
-    <section id="mapas" className="relative py-20 bg-[url('/textura2.png')] bg-cover bg-center">
+    <section id="mapas" className="relative py-20 bg-[url('/textura-resp2.png')] bg-cover bg-center">
       
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         

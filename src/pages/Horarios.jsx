@@ -3,7 +3,7 @@ import HorariosAnexo from '../components/HorariosAnexo';
 
 const Horarios = () => {
   return (
-    <section id="horarios" className="relative py-20 bg-[url('/textura.png')] bg-cover bg-center">
+    <section id="horarios" className="relative py-20 bg-[url('/textura-resp.png')] bg-cover bg-center">
       
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-2">
         <div className="text-center mb-10">
