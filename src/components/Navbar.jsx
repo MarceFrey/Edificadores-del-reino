@@ -10,7 +10,7 @@ const Navbar = () => {
 
   // 1. Modificamos los 'paths' para que usen el símbolo '#' (Hash/Ancla)
   const navLinks = [
-    { name: 'Inicio', path: '#' }, 
+    { name: 'Inicio', path: '/' }, 
     { name: 'Ministerios', path: '#ministerios' },
     { name: 'Donaciones', path: '#donaciones' },
     { name: 'Contacto', path: '#contacto' },

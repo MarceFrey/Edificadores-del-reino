@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { BookOpen, Heart, Music, Users, Baby, HandHeart, Shield, Flower2, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Ministries = () => {
   const ministries = [
@@ -7,55 +8,64 @@ const Ministries = () => {
       title: "Discipulado",
       description: "Estudiamos juntos la palabra de Dios para poder seguir los pasos de Jesús.",
       icon: <BookOpen className="w-8 h-8 text-amber-400" />,
-      image: "./discipulado.jpg"
+      image: "./discipulado.jpg",
+      path: "/discipulado" // <-- 2. Agregamos la ruta
     },
     {
       title: "Alabanza y Adoración",
       description: "Un equipo apasionado por conectar el cielo y la tierra a través de la música.",
       icon: <Music className="w-8 h-8 text-amber-400" />,
-      image: "./alabanza.jpeg"
+      image: "./alabanza.jpeg",
+      path: "/alabanza"
     },
     {
       title: "Escuela Bíblica",
       description: "Enseñanza divertida y segura para los más pequeños de la casa.",
       icon: <Baby className="w-8 h-8 text-amber-400" />,
-      image: "./escuela.jpeg"
+      image: "./escuela.jpeg",
+      path: "/escuela-biblica"
     },
     {
       title: "Ayuda Social",
       description: "Llevamos alimentos y esperanza a los barrios más necesitados.",
       icon: <HandHeart className="w-8 h-8 text-amber-400" />,
-      image: "./alabanza.jpeg"
+      image: "./alabanza.jpeg", // (Nota: actualiza esta imagen si tienes una distinta)
+      path: "/ayuda-social"
     },
     {
       title: "Jóvenes",
       description: "El lugar donde la juventud se reúne a adorar y aprender la palabra de Dios.",
       icon: <Zap className="w-8 h-8 text-amber-400" />,
-      image: "./alabanza.jpeg"
+      image: "./alabanza.jpeg",
+      path: "/jovenes"
     },
     {
       title: "Matrimonios",
       description: "Herramientas para construir familias fuertes y unidas.",
       icon: <Heart className="w-8 h-8 text-amber-400" />,
-      image: "./alabanza.jpeg"
+      image: "./alabanza.jpeg",
+      path: "/matrimonios"
     },
     {
       title: "Adolescentes",
       description: "Un espacio dinámico para que las nuevas generaciones encuentren su identidad.",
       icon: <Users className="w-8 h-8 text-amber-400" />,
-      image: "./alabanza.jpeg"
+      image: "./alabanza.jpeg",
+      path: "/adolescentes"
     },
     {
       title: "Hombres",
       description: "Donde los hombres de la Iglesia aprenden a ser hombres de Dios.",
       icon: <Shield className="w-8 h-8 text-amber-400" />,
-      image: "./alabanza.jpeg"
+      image: "./alabanza.jpeg",
+      path: "/hombres"
     },
     {
       title: "Mujeres",
       description: "El espacio donde Dios tiene los detalles más hermosos para ellas.",
       icon: <Flower2 className="w-8 h-8 text-amber-400" />,
-      image: "./alabanza.jpeg"
+      image: "./alabanza.jpeg",
+      path: "/mujeres"
     },
   ];
 
@@ -88,11 +98,12 @@ const Ministries = () => {
         {/* Grid de Tarjetas */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {ministries.map((ministry, index) => (
-            <div 
+            <Link 
               key={index} 
-              //SENSOR
+              to={ministry.path} // <--- Redirección a la nueva página
               onMouseEnter={() => setActiveBg(ministry.image)}
-              className="bg-white/10 backdrop-blur-md border border-white/10 p-8 rounded-2xl hover:bg-white/20 hover:-translate-y-2 transition-all duration-300 group cursor-pointer"
+              // Se le agrega 'block' por seguridad para que respete los tamaños en el grid
+              className="block bg-white/10 backdrop-blur-md border border-white/10 p-8 rounded-2xl hover:bg-white/20 hover:-translate-y-2 transition-all duration-300 group cursor-pointer"
             >
               
               {/* Icono */}
@@ -108,7 +119,7 @@ const Ministries = () => {
               <p className="text-gray-300 leading-relaxed group-hover:text-white transition-colors duration-300">
                 {ministry.description}
               </p>
-            </div>
+            </Link>
           ))}
         </div>
 
