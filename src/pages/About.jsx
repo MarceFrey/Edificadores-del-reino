@@ -3,22 +3,17 @@ import { Quote } from 'lucide-react';
 const About = () => {
   return (
     <section id="nosotros" className="relative py-24 bg-[url('/Textura7.png')] bg-cover bg-center">
-      
-      {/* 1. EL OVERLAY: protege la legibilidad del texto */}
       <div className="absolute inset-0 bg-white/90 backdrop-blur-sm"></div>
-
-      {/* Todo el contenido envuelto en relative z-10 para que quede arriba del overlay */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Aumenté el 'gap' (espacio) entre la foto y el texto para que respire más */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           {/* --- COLUMNA 1: IMAGEN --- */}
           <div className="relative group">
+            
             <div className="absolute -bottom-6 -left-6 w-full h-full bg-amber-100 rounded-3xl -z-10 transform group-hover:-translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
-            {/* Destello de luz detrás de la foto */}
+
             <div className="absolute -top-6 -right-6 w-32 h-32 bg-amber-200 rounded-full -z-10 blur-2xl opacity-60"></div>
-            {/* LA FOTO: borde blanco (border-4 border-white) y mucha sombra */}
+
             <img 
               src= "/pastores1.jpeg"
               alt="Pastores de la iglesia Edificadores del Reino" 
@@ -48,7 +43,7 @@ const About = () => {
               En Edificadores del Reino, creemos firmemente en la restauración integral de la familia y en equipar a cada creyente para impactar su entorno con excelencia y amor.
             </p>
 
-            {/* Firma / Cita Destacada */}
+            {/*Cita Destacada */}
             <div className="relative bg-gray-50/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-100 shadow-sm">
               <Quote className="absolute top-4 right-4 w-8 h-8 text-amber-200 opacity-50" />
               <p className="text-lg text-gray-600 font-serif italic relative z-10">

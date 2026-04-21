@@ -9,7 +9,7 @@ const Ministries = () => {
       description: "Estudiamos juntos la palabra de Dios para poder seguir los pasos de Jesús.",
       icon: <BookOpen className="w-8 h-8 text-amber-400" />,
       image: "./discipulado.jpg",
-      path: "/discipulado" // <-- 2. Agregamos la ruta
+      path: "/discipulado" 
     },
     {
       title: "Alabanza y Adoración",
@@ -29,7 +29,7 @@ const Ministries = () => {
       title: "Ayuda Social",
       description: "Llevamos alimentos y esperanza a los barrios más necesitados.",
       icon: <HandHeart className="w-8 h-8 text-amber-400" />,
-      image: "./alabanza.jpeg", // (Nota: actualiza esta imagen si tienes una distinta)
+      image: "./alabanza.jpeg",
       path: "/ayuda-social"
     },
     {
@@ -72,10 +72,8 @@ const Ministries = () => {
   const [activeBg, setActiveBg] = useState(ministries[0].image);
 
   return (
-    // 'relative' para que la imagen de fondo no se escape de esta sección
     <section id="ministerios" className="relative py-24 overflow-hidden">
-      
-      {/*'duration-1000' hace que la transición sea súper suave */}
+
       <div 
         className="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out scale-105"
         style={{ backgroundImage: `url(${activeBg})` }}
@@ -100,9 +98,8 @@ const Ministries = () => {
           {ministries.map((ministry, index) => (
             <Link 
               key={index} 
-              to={ministry.path} // <--- Redirección a la nueva página
+              to={ministry.path}
               onMouseEnter={() => setActiveBg(ministry.image)}
-              // Se le agrega 'block' por seguridad para que respete los tamaños en el grid
               className="block bg-white/10 backdrop-blur-md border border-white/10 p-8 rounded-2xl hover:bg-white/20 hover:-translate-y-2 transition-all duration-300 group cursor-pointer"
             >
               
@@ -111,7 +108,6 @@ const Ministries = () => {
                 {ministry.icon}
               </div>
 
-              {/* Textos en color blanco/gris claro para contrastar con el fondo oscuro */}
               <h3 className="text-2xl font-bold text-white mb-3">
                 {ministry.title}
               </h3>

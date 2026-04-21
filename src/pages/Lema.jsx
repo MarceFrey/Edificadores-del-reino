@@ -6,13 +6,11 @@ const Lema = () => {
     <section id="lema" className="relative py-20 bg-[url('/textura.png')] bg-cover bg-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Contenedor Flex: Imagen a la izquierda, texto a la derecha */}
         <div className="flex flex-col lg:flex-row items-stretch gap-12 lg:gap-16">
           
           {/* --- BLOQUE DE IMAGEN --- */}
           <div className="w-full lg:w-5/12">
             <div className="relative h-full min-h-[400px]">
-              {/* Decoración detrás de la foto */}
               <div className="absolute -top-4 -left-4 w-72 h-72 bg-amber-100 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
               <img 
                 src={lema} 

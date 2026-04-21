@@ -9,8 +9,7 @@ const Pastores = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
-          {/* --- COLUMNA 1: LA FOTOGRAFÍA --- */}
-          {/* Mantenemos 'group' aquí para controlar los efectos de los hijos al hacer hover */}
+          {/* --- COLUMNA 1: FOTOGRAFÍA --- */}
           <div className="flex justify-center lg:justify-end order-1 lg:order-2 group">
             
             <Link 
@@ -18,21 +17,13 @@ const Pastores = () => {
               className="relative w-64 h-64 sm:w-80 sm:h-80 block cursor-pointer overflow-hidden rounded-full"
               aria-label="Conoce más sobre los Apóstoles"
             >
-              {/* Sombra ámbar difuminada de fondo (se mantiene igual) */}
               <div className="absolute inset-0 bg-amber-200 rounded-full blur-2xl opacity-40 group-hover:opacity-70 transition-opacity duration-500"></div>
-              
-              {/* 🖼️ La Fotografía */}
-              {/* Añadimos group-hover:scale-105 (ya estaba) y group-hover:opacity-60 
-                  para que la foto se ponga un poco opaca al pasar el mouse */}
+          
               <img 
                 src="/pastores1.jpeg" 
                 alt="Apóstoles Alfredo y Dora Provenzano" 
                 className="relative w-full h-full object-cover rounded-full shadow-2xl border-8 border-white transition-all duration-500 group-hover:scale-105 group-hover:opacity-50 z-10"
               />
-
-              {/* 🪄 EL NUEVO EFECTO: Superposición de texto al hacer hover */}
-              {/* Este div está oculto por defecto (opacity-0) y se muestra en hover (group-hover:opacity-100).
-                  Se posiciona absolutamente sobre la foto. z-20 para estar sobre la imagen. */}
               <div className="absolute inset-0 bg-amber-950/80 rounded-full flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-20 p-4 text-center">
                 <p className="text-white text-xl font-bold leading-tight">
                   Conoce nuestra<br />historia
@@ -41,7 +32,7 @@ const Pastores = () => {
             </Link>
           </div>
 
-          {/* --- COLUMNA 2: LOS TEXTOS (Sin cambios) --- */}
+          {/* --- COLUMNA 2: LOS TEXTOS --- */}
           <div className="flex flex-col order-2 lg:order-1">
             
             <div className="self-start inline-block py-1.5 px-4 rounded-full bg-amber-100 border border-amber-200 text-amber-900 text-xs font-bold tracking-widest uppercase mb-6 shadow-sm">

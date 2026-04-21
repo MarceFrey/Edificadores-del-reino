@@ -17,8 +17,6 @@ function Home() {
       <Pastores />
       <Horarios />
       <Mapas />
-      
-      
     </div>
   )
 }

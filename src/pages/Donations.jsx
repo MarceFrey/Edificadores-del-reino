@@ -34,7 +34,6 @@ const methods = [
 
 const Donations = () => {
   return (
-    // 1. EL FONDO Y EL OVERLAY (Protege la lectura)
     <section id="donaciones" className="relative py-24 bg-[url('/textura2.png')] bg-cover bg-center">
       <div className="absolute inset-0 bg-white/90 backdrop-blur-[2px]"></div>
 

@@ -28,7 +28,6 @@ const mockEvents = [
 
 const Events = () => {
   return (
-    // Usamos un fondo gris muy clarito para que las tarjetas blancas resalten
     <section id="eventos" className="relative py-20 bg-[url('/textura4.png')] bg-cover bg-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -42,12 +41,10 @@ const Events = () => {
           </p>
         </div>
 
-        {/* ── La Vitrina de Tarjetas (Grid) ── */}
-        {/* En celulares (1 col), en tablets (2 cols), en compus (3 cols) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           
           {mockEvents.map((event) => (
-            // La Tarjeta Individual
+
             <div 
               key={event.id} 
               className="group bg-white rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col"
@@ -87,7 +84,7 @@ const Events = () => {
                     {event.time}
                   </div>
                   
-                  {/* Botón circular elegante */}
+                  {/* Botón circular */}
                   <button className="w-12 h-12 rounded-full bg-amber-50 flex items-center justify-center text-amber-900 group-hover:bg-amber-900 group-hover:text-white transition-all duration-300 shadow-sm">
                     <ArrowRight size={20} />
                   </button>
