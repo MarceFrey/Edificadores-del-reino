@@ -12,13 +12,13 @@ function Home() {
   return (
     <div className="min-h-screen font-sans bg-[url('/fondo.png')] bg-cover bg-center bg-fixed">
       <Hero />
+      <Events />
       <Lema/>
       <Pastores />
       <Horarios />
       <Mapas />
-      <Events />
-      <Ministries />
-      <Donations />
+      
+      
     </div>
   )
 }

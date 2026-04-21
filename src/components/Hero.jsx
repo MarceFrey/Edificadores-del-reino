@@ -3,15 +3,10 @@ import { ChevronRight, PlayCircle } from 'lucide-react';
 const Hero = () => {
   return (
     <div className="relative bg-gray-900 h-[600px] overflow-hidden">
-
-      {/* --- FONDOS (VIDEOS/IMÁGENES) --- */}
       <div className="absolute inset-0 z-0">
-        
-        {/* 🖥️ VERSIÓN ESCRITORIO (Horizontal) 
-            'hidden' lo oculta en celulares.
-            'md:block' lo muestra a partir de pantallas medianas (tablets y PC). */}
+        {/* VERSIÓN ESCRITORIO (Horizontal) */}
         <video
-          src="/hero-video.mp4"
+          src="/portadaEDR.mp4"
           autoPlay
           muted
           loop
@@ -19,23 +14,15 @@ const Hero = () => {
           className="hidden md:block absolute inset-0 w-full h-full object-cover"
         />
 
-        {/* 📱 VERSIÓN CELULAR (Vertical) 
-            'block' lo muestra por defecto en celulares.
-            'md:hidden' lo esconde cuando la pantalla es grande. */}
-        {/* ⚠️ Si tu archivo es una foto y no un video, cambia toda esta etiqueta <video> por: 
-            <img src="/hero-video-resp.jpg" className="block md:hidden absolute inset-0 w-full h-full object-cover" /> 
-        */}
+        {/* VERSIÓN CELULAR (Vertical)*/}
         <video
-          src="/hero-video-resp.mp4"
+          src="/portadaEDR.mp4"
           autoPlay
           muted
           loop
           playsInline
           className="block md:hidden absolute inset-0 w-full h-full object-cover"
         />
-
-        {/* OVERLAY (FILTRO OSCURO COMPARTIDO) */}
-        {/* Este filtro se aplica a cualquiera de los dos videos que esté visible */}
         <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
