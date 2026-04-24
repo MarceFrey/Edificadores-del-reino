@@ -12,9 +12,9 @@ function Home() {
   return (
     <div className="min-h-screen font-sans bg-[url('/fondo.png')] bg-cover bg-center bg-fixed">
       <Hero />
-      <Events />
-      <Lema/>
       <Pastores />
+      <Events />
+      <Lema/> 
       <Horarios />
       <Mapas />
     </div>

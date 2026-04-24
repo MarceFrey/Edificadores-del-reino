@@ -15,7 +15,7 @@ const About = () => {
             <div className="absolute -top-6 -right-6 w-32 h-32 bg-amber-200 rounded-full -z-10 blur-2xl opacity-60"></div>
 
             <img 
-              src= "/pastores1.jpeg"
+              src= "/pastores2.jpeg"
               alt="Pastores de la iglesia Edificadores del Reino" 
               className="relative w-full rounded-2xl shadow-2xl border-4 border-white object-cover aspect-[4/5] hover:scale-[1.02] transition duration-500"
             />

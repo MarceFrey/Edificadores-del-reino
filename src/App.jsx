@@ -9,6 +9,8 @@ import Donations from './pages/Donations';
 import Ministries from './pages/Ministries';
 import About from './pages/About';
 import Escuela from './pages/Escuela';
+import Login from './pages/Login';
+import Admin from './pages/Admin';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/nosotros" element={<About />} />
           <Route path="/escuela-biblica" element={<Escuela />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
       </div>
       <Footer />

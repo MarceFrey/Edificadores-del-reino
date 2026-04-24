@@ -4,14 +4,14 @@ const HorariosAnexo = () => {
   const schedule = [
     { 
       title: 'Reunión General', 
-      days: 'Dom 10:00 AM | Mié 20:00 PM', 
+      days: 'Martes 20:00 PM | Viernes 20:00 PM', 
       icon: Users, 
       color: 'text-amber-900', 
       bg: 'bg-gray-100' 
     },
     { 
       title: 'Niños', 
-      days: 'Sáb 10:00 AM', 
+      days: 'Sáb 15:00 AM', 
       icon: Baby, 
       color: 'text-amber-900', 
       bg: 'bg-gray-100' 
@@ -26,7 +26,6 @@ const HorariosAnexo = () => {
   ];
 
   return (
-    // Contenedor elástico
     <div className="w-full h-full">
       
       <div className="bg-white rounded-3xl p-6 md:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 h-full flex flex-col">
@@ -42,7 +41,7 @@ const HorariosAnexo = () => {
           </div>
         </div>
 
-        {/* --- LISTA DE HORARIOS (Generada automáticamente) --- */}
+        {/* --- LISTA DE HORARIOS --- */}
         <div className="flex-grow space-y-3">
           {schedule.map((item, index) => (
             
@@ -54,7 +53,6 @@ const HorariosAnexo = () => {
               {/* Lado Izquierdo: Icono + Título */}
               <div className="flex items-center gap-4">
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${item.bg} ${item.color} group-hover:scale-110 transition-transform duration-300 shrink-0`}>
-                  {/* Renderizamos el icono dinámicamente */}
                   <item.icon className="w-6 h-6" strokeWidth={2.5} />
                 </div>
                 <span className="font-bold text-gray-800 text-lg">

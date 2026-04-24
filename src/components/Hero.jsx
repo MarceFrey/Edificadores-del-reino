@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <div className="relative bg-gray-900 h-[600px] overflow-hidden">
       <div className="absolute inset-0 z-0">
-        {/* VERSIÓN ESCRITORIO (Horizontal) */}
+        {/* VERSIÓN ESCRITORIO */}
         <video
           src="/portadaEDR.mp4"
           autoPlay
@@ -14,7 +14,7 @@ const Hero = () => {
           className="hidden md:block absolute inset-0 w-full h-full object-cover"
         />
 
-        {/* VERSIÓN CELULAR (Vertical)*/}
+        {/* VERSIÓN CELULAR */}
         <video
           src="/portadaEDR.mp4"
           autoPlay
