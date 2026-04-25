@@ -11,6 +11,7 @@ import About from './pages/About';
 import Escuela from './pages/Escuela';
 import Login from './pages/Login';
 import Admin from './pages/Admin';
+import PedidosOracion from './pages/PedidosOracion';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/escuela-biblica" element={<Escuela />} />
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/oracion" element={<PedidosOracion />} />
         </Routes>
       </div>
       <Footer />
