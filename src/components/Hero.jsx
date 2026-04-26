@@ -16,7 +16,7 @@ const Hero = () => {
 
         {/* VERSIÓN CELULAR */}
         <video
-          src="/portadaEDR.mp4"
+          src="/portadaEDRcel.mp4"
           autoPlay
           muted
           loop
