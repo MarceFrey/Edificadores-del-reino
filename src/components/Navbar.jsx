@@ -13,7 +13,7 @@ const Navbar = () => {
     { name: 'Eventos', path: '#eventos' },
     { name: 'Horarios', path: '#horarios' },
     { name: 'Ubicacion', path: '#mapas'},
-    //{ name: 'Ministerios', path: '#ministerios' },
+    { name: 'Oracion', path: '/oracion' },
     //{ name: 'Donaciones', path: '#donaciones' },
     //{ name: 'Contacto', path: '#contacto' },
   ];

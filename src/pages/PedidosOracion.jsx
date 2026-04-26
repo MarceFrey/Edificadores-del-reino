@@ -7,6 +7,8 @@ const PedidosOracion = () => {
     nombre: '',
     apellido: '',
     telefono: '',
+    edad:'',
+    pedido:'',
   });
 
   // 2. Estado para manejar el botón de carga y mensajes de éxito/error
@@ -31,6 +33,8 @@ const PedidosOracion = () => {
             nombre: formData.nombre,
             apellido: formData.apellido,
             telefono: formData.telefono,
+            edad: formData.edad,
+            pedido: formData.pedido,
           },
         ]);
 
@@ -89,7 +93,6 @@ const PedidosOracion = () => {
               <input
                 type="text"
                 name="apellido"
-                required
                 value={formData.apellido}
                 onChange={handleChange}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition"
@@ -103,11 +106,37 @@ const PedidosOracion = () => {
               <input
                 type="tel"
                 name="telefono"
-                required
                 value={formData.telefono}
                 onChange={handleChange}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition"
                 placeholder="Ej: 11 1234 5678"
+              />
+            </div>
+
+            {/* Campo Edad */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Edad</label>
+              <input
+                type="edad"
+                name="edad"
+                value={formData.edad}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition"
+                placeholder="Ej: 35"
+              />
+            </div>
+
+            {/* Campo Pedido */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Pedido</label>
+              <input
+                type="ped"
+                name="pedido"
+                required
+                value={formData.pedido}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition"
+                placeholder="Ej: Necesito oracion por mi familia."
               />
             </div>
 
