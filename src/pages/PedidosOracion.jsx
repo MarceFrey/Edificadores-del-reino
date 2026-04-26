@@ -69,7 +69,7 @@ const PedidosOracion = () => {
         {/* Formulario */}
         <div className="p-8">
           <p className="text-gray-600 mb-6 text-center">
-            Déjanos tus datos. Nuestro equipo de intercesión estará orando por ti.
+            Dejanos tus datos. Nuestro equipo de intercesión estará orando por vos.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-5">
