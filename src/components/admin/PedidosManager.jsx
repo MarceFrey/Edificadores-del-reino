@@ -154,7 +154,7 @@ const obtenerPedidos = async () => {
                 </span>
                 {pedido.edad && (
                   <span className="text-xs bg-gray-50 text-gray-600 px-2 py-1 rounded-md border border-gray-100">
-                    🎂 {pedido.edad} años
+                    {pedido.edad} años
                   </span>
                 )}
               </div>
