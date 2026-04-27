@@ -59,7 +59,7 @@ const Events = () => {
                 {/* Bloque Superior: Imagen y Fecha */}
                 <div className="relative h-60 overflow-hidden">
                   <img
-                    src={event.img}
+                    src={event.image}
                     alt={event.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
