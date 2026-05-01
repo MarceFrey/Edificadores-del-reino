@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { Facebook, Instagram, MapPin, Mail, Phone } from 'lucide-react';
 import logoImg from '../assets/logo-edr.png';
 

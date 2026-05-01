@@ -12,6 +12,7 @@ import Escuela from './pages/Escuela';
 import Login from './pages/Login';
 import Admin from './pages/Admin';
 import PedidosOracion from './pages/PedidosOracion';
+import ConfirmacionEvento from './pages/ConfirmacionEvento';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/oracion" element={<PedidosOracion />} />
+          <Route path="/evento/:id/asistencia" element={<ConfirmacionEvento />} />
         </Routes>
       </div>
       <Footer />

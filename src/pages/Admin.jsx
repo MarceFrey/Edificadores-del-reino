@@ -1,13 +1,15 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Calendar, MessageSquare, LogOut } from 'lucide-react';
+import { Calendar, MessageSquare, LogOut, Users } from 'lucide-react';
 import { supabase } from '../supabaseClient';
 import EventosManager from '../components/admin/EventosManager';
 import PedidosManager from '../components/admin/PedidosManager';
+import AsistenciasManager from '../components/admin/AsistenciasManager';
 
 const NAV_ITEMS = [
   { id: 'eventos', label: 'Eventos', Icon: Calendar },
   { id: 'pedidos', label: 'Pedidos de Oración', Icon: MessageSquare },
+  { id: 'asistencias', label: 'Asistencias', Icon: Users },
 ];
 
 const Admin = () => {
@@ -101,6 +103,7 @@ const Admin = () => {
         {/* Renderizado condicional según pestaña activa */}
         {pestañaActiva === 'eventos' && <EventosManager />}
         {pestañaActiva === 'pedidos' && <PedidosManager />}
+        {pestañaActiva === 'asistencias' && <AsistenciasManager />}
       </main>
 
     </div>

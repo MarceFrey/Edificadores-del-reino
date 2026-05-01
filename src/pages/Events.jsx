@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { CalendarDays, Clock, ArrowRight } from 'lucide-react';
-import { supabase } from '../supabaseClient'; // Ajusta la ruta según dónde guardaste el archivo
+import { supabase } from '../supabaseClient';
 
 const Events = () => {
   const [events, setEvents] = useState([]);
@@ -87,9 +88,13 @@ const Events = () => {
                       {event.time}
                     </div>
                     
-                    <button className="w-12 h-12 rounded-full bg-amber-50 flex items-center justify-center text-amber-900 group-hover:bg-amber-900 group-hover:text-white transition-all duration-300 shadow-sm">
+                    <Link
+                      to={`/evento/${event.id}/asistencia`}
+                      className="w-12 h-12 rounded-full bg-amber-50 flex items-center justify-center text-amber-900 group-hover:bg-amber-900 group-hover:text-white transition-all duration-300 shadow-sm"
+                      aria-label={`Confirmar asistencia a ${event.title}`}
+                    >
                       <ArrowRight size={20} />
-                    </button>
+                    </Link>
                   </div>
                 </div>
 
